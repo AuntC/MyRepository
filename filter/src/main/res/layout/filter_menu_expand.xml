@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.meizu.caiweixin.mydemo.filter.menu.PinnedHeaderExpandableListView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/filter_menu_expand"
+    android:layout_width="match_parent"
+    android:cacheColorHint="@null"
+    android:childDivider="#11000000"
+    android:divider="#33000000"
+    android:dividerHeight="1px"
+    android:groupIndicator="@null"
+    android:layout_height="match_parent">
+
+</com.meizu.caiweixin.mydemo.filter.menu.PinnedHeaderExpandableListView>

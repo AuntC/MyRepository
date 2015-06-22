@@ -1,0 +1,32 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="popupAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_enter</item>
+        <item name="android:windowExitAnimation">@anim/popup_exit</item>
+    </style>
+
+    <style name="TagGroup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="atg_textSize">12sp</item>
+        <item name="atg_horizontalPadding">16dp</item>
+        <item name="atg_verticalPadding">6dp</item>
+        <item name="atg_verticalSpacing">12dp</item>
+        <item name="atg_horizontalSpacing">8dp</item>
+        <item name="atg_borderStrokeWidth">2px</item>
+        <item name="atg_textColor">#80000000</item>
+        <item name="atg_borderColor">#26000000</item>
+        <item name="atg_backgroundColor">#fafafa</item>
+        <item name="atg_pressedBackgroundColor">#e03731</item>
+        <item name="atg_pressedTextColor">#ffffff</item>
+        <item name="atg_isAppendMode">false</item>
+    </style>
+
+</resources>
