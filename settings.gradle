@@ -1,1 +1,1 @@
-include ':filter', ':tab', ':calendar', ':lru'
+include ':filter', ':tab', ':calendar', ':lru', ':dashline'
