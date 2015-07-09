@@ -1,1 +1,1 @@
-include ':filter', ':tab', ':calendar', ':lru', ':dashline'
+include ':filter', ':tab', ':calendar', ':lru', ':dashline', ':getinstalledapks'
