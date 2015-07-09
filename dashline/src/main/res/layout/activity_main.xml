@@ -15,4 +15,9 @@
         android:layout_height="match_parent"
         android:layout_centerInParent="true" />
 
+    <com.example.dashline.DashLineX
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_centerInParent="true" />
+
 </RelativeLayout>
