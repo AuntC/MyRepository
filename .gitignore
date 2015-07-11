@@ -4,15 +4,10 @@
 /.idea/libraries
 .DS_Store
 /build
-.gitignore
 .idea/
-MyDemo.iml
 gradle.properties
 gradle/
 gradlew
 gradlew.bat
-calendar/calendar.iml
-filter/filter.iml
-lru/lru.iml
-tab/tab.iml
-dashline/dashline.iml
+*.iml
+*.gitignore
