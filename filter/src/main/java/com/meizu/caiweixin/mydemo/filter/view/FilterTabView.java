@@ -8,14 +8,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.meizu.caiweixin.mydemo.R;
+import com.meizu.media.life.R;
 
-/**
- * Created by caiweixin on 5/14/15.
- */
 public class FilterTabView extends LinearLayout {
     private Context mContext;
-    private TextView mTextView;
+    private TextView mTabTitle, mDivider;
     private ImageView mImageView;
     private boolean mIsExpand;
     private int mTabIndex;
@@ -46,7 +43,9 @@ public class FilterTabView extends LinearLayout {
                 }
             }
         });
-        mTextView = (TextView) view.findViewById(R.id.tabview_tv);
+        mTabTitle = (TextView) view.findViewById(R.id.tabview_tv);
+        mDivider = (TextView) view.findViewById(R.id.filter_divide_line);
+        mDivider.setVisibility(tabIndex == 0 ? GONE : VISIBLE);
         mImageView = (ImageView) view.findViewById(R.id.tabview_img);
     }
 
@@ -55,15 +54,20 @@ public class FilterTabView extends LinearLayout {
     }
 
     public void setTabText(String text) {
-        if (null != mTextView) {
-            mTextView.setText("" + text);
+        if (null != mTabTitle) {
+            mTabTitle.setText("" + text);
         }
+    }
+
+    public String getTabText() {
+        return null == mTabTitle ? "" : mTabTitle.getText().toString();
     }
 
     public void setTabExpandImg(boolean isExpand) {
         mIsExpand = isExpand;
         if (null != mImageView) {
-            mImageView.setImageResource(isExpand ? R.drawable.map_expand_up : R.drawable.map_expand_down);
+            mTabTitle.setTextColor(isExpand ? mContext.getResources().getColor(R.color.mz_theme_color_firebrick) : mContext.getResources().getColor(R.color.filter_tab_text_color));
+            mImageView.setImageResource(isExpand ? R.drawable.arrow_up_red : R.drawable.arrow_down_gray);
         }
     }
 

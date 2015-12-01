@@ -1,16 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/filter_titleview_height"
+    android:minHeight="@dimen/filter_titleview_height">
 
     <TextView
-        android:id="@+id/tabview_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="全部地区"/>
+        android:id="@+id/filter_divide_line"
+        android:layout_width="@dimen/divider_width_0.67dp"
+        android:layout_height="16dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@color/all_divider_color"
+        android:contentDescription="@string/app_name"
+        android:minHeight="16dp"
+        android:minWidth="@dimen/divider_width_0.67dp" />
 
-    <ImageView
-        android:id="@+id/tabview_img"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/map_expand_down"/>
-</merge>
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tabview_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:ellipsize="end"
+            android:maxWidth="70dp"
+            android:singleLine="true"
+            android:text="全部"
+            android:textColor="@color/filter_tab_text_color"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/tabview_img"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/arrow_down_gray" />
+    </LinearLayout>
+</RelativeLayout>

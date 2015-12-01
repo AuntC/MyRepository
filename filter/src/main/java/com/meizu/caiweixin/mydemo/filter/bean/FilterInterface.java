@@ -7,4 +7,5 @@ public interface FilterInterface {
     public abstract String getId();
 
     public abstract String getText();
+
 }

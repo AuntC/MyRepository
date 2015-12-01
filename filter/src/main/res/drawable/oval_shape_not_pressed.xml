@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/filter_contentview_color" />
+    <stroke
+        android:width="2px"
+        android:color="@color/filter_expand_child_text" />
+    <corners
+        android:topLeftRadius="13dp"
+        android:topRightRadius="13dp"
+        android:bottomRightRadius="13dp"
+        android:bottomLeftRadius="13dp" />
+</shape>

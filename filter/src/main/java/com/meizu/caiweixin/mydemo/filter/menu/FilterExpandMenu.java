@@ -12,9 +12,7 @@ import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.meizu.caiweixin.mydemo.FilterActivity;
 import com.meizu.caiweixin.mydemo.R;
-import com.meizu.caiweixin.mydemo.filter.bean.FilterBaseBean;
 import com.meizu.caiweixin.mydemo.filter.bean.FilterExpandBean;
 import com.meizu.caiweixin.mydemo.filter.bean.FilterMenuBean;
 

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/filter_expandview_pandding"
+    android:paddingRight="@dimen/filter_expandview_pandding">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/filter_expandlistview_group_height"
+        android:minHeight="@dimen/filter_expandlistview_group_height"
+        android:paddingLeft="@dimen/filter_expandview_pandding"
+        android:paddingRight="@dimen/filter_expandview_pandding">
+
+        <LinearLayout
+            android:id="@+id/filter_pinned_title_container_with_flag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/filter_pinned_title_expand"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/filter_pinned_title_flag"
+                android:layout_width="2dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="6dp"
+                android:background="@color/mz_theme_color_firebrick" />
+
+            <TextView
+                android:id="@+id/filter_pinned_title_text_with_flag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:textColor="@color/filter_tab_text_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/filter_pinned_title_text_without_flag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/filter_pinned_title_expand"
+            android:includeFontPadding="false"
+            android:textColor="@color/filter_tab_text_color"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/filter_pinned_title_expand"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:minHeight="10dp"
+            android:minWidth="10dp"
+            android:src="@drawable/arrow_down_gray" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_width_0.67dp"
+        android:background="@color/all_divider_color" />
+</LinearLayout>

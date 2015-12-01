@@ -45,7 +45,7 @@ public class GridAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder;
         if (null == convertView) {
-            convertView = mInflater.inflate(R.layout.filter_menu_gridview_item, null);
+            convertView = mInflater.inflate(R.layout.filter_menu_gridview_item, parent, false);
             viewHolder = new ViewHolder(convertView);
             convertView.setTag(viewHolder);
         } else {
@@ -58,8 +58,13 @@ public class GridAdapter extends BaseAdapter {
     }
 
     private void bindData(ViewHolder viewHolder, FilterBaseBean filterBaseBean) {
-        viewHolder.mTextView.setText(filterBaseBean.text);
-        viewHolder.mTextView.setTextColor(mContext.getResources().getColor(filterBaseBean.isSelected ? R.color.filter_text_selected : R.color.filter_text_normal));
+        if (filterBaseBean.isAllTitle) {
+            viewHolder.mTextView.setText(mContext.getResources().getString(R.string.all));
+        } else {
+            viewHolder.mTextView.setText(filterBaseBean.text);
+        }
+        viewHolder.mTextView.setBackground(mContext.getResources().getDrawable(filterBaseBean.isSelected ? R.drawable.oval_shape_pressed : R.drawable.oval_shape_not_pressed));
+        viewHolder.mTextView.setTextColor(mContext.getResources().getColor(filterBaseBean.isSelected ? R.color.filter_contentview_color : R.color.filter_text_normal));
     }
 
     static class ViewHolder {
@@ -68,5 +73,17 @@ public class GridAdapter extends BaseAdapter {
         public ViewHolder(View view) {
             mTextView = (TextView) view.findViewById(R.id.gridview_item_tv);
         }
+    }
+
+
+    public void swapData(List<FilterBaseBean> dataList) {
+        if (mList != dataList) {
+            onDataChanged(dataList);
+            mList = dataList;
+        }
+        notifyDataSetChanged();
+    }
+
+    protected void onDataChanged(List<FilterBaseBean> dataList) {
     }
 }

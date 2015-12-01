@@ -7,5 +7,5 @@ import java.util.List;
  */
 public class FilterExpandBean {
     public FilterBaseBean title;
-    public List<FilterBaseBean> child;
+    public List<RegionItemBean> child;
 }

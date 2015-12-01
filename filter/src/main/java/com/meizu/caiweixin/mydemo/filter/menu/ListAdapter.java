@@ -12,6 +12,7 @@ import com.meizu.caiweixin.mydemo.filter.bean.FilterCountBean;
 
 import java.util.List;
 
+
 /**
  * Created by caiweixin on 5/13/15.
  */
@@ -47,7 +48,7 @@ public class ListAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder;
         if (null == convertView) {
-            convertView = mInflater.inflate(R.layout.filter_menu_listview_item, null);
+            convertView = mInflater.inflate(R.layout.filter_menu_listview_item, parent, false);
             viewHolder = new ViewHolder(convertView);
             convertView.setTag(viewHolder);
         } else {

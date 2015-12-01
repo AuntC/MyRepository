@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.meizu.caiweixin.mydemo.filter.menu.PinnedHeaderExpandableListView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.meizu.media.life.ui.widget.filter.menu.PinnedHeaderExpandableListView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/filter_menu_expand"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:cacheColorHint="@null"
-    android:childDivider="#11000000"
-    android:divider="#33000000"
-    android:dividerHeight="1px"
+    android:childDivider="@color/all_divider_color"
+    android:divider="@color/all_divider_color"
+    android:dividerHeight="@dimen/divider_width_0.67dp"
     android:groupIndicator="@null"
-    android:layout_height="match_parent">
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:scrollbarStyle="outsideOverlay">
 
-</com.meizu.caiweixin.mydemo.filter.menu.PinnedHeaderExpandableListView>
+</com.meizu.media.life.ui.widget.filter.menu.PinnedHeaderExpandableListView>

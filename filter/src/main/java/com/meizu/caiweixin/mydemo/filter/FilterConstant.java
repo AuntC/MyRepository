@@ -10,17 +10,13 @@ public class FilterConstant {
         public static final int GRID = 1;
         public static final int LIST = 2;
         public static final int EXPANDABLELIST = 3;
+        public static final int SIMPLE_TAG = 4;
+        public static final int SIMPLE_EXPANDABLELIST = 5;
+        public static final int DISTRICT = 6;
     }
 
     public interface MenuColumns {
-        public static final int GRID = 3;
+        public static final int GRID = 4;
     }
 
-    public interface Height {
-        public static final int POPUP_WINDOW = 300;
-        public static final int LISTVIEW_ITEM = 56;
-        public static final int GRIDVIEW_ITEM = 56;
-        public static final int EXPANDVIEW_GROUP = 56;
-        public static final int EXPANDVIEW_CHILD = 56;
-    }
 }

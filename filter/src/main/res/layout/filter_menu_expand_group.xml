@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:background="@color/filter_text_selected"
-                android:layout_width="match_parent"
-                android:minHeight="@dimen/filter_expandlistview_group_height"
-                android:layout_height="@dimen/filter_expandlistview_group_height">
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/filter_expandlistview_group_height"
+    android:minHeight="@dimen/filter_expandlistview_group_height"
+    android:paddingLeft="@dimen/filter_expandview_pandding"
+    android:paddingRight="@dimen/filter_expandview_pandding">
 
     <TextView
         android:id="@+id/group_title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"/>
+        android:layout_toLeftOf="@+id/group_expand"
+        android:includeFontPadding="false"
+        android:textColor="@color/filter_tab_text_color"
+        android:textSize="16sp" />
+
 
     <ImageView
         android:id="@+id/group_expand"
-        android:layout_width="28dp"
-        android:layout_height="28dp"
-        android:layout_centerVertical="true"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
         android:layout_alignParentRight="true"
-        android:src="@drawable/map_expand_down"/>
+        android:layout_centerVertical="true"
+        android:minHeight="10dp"
+        android:minWidth="10dp"
+        android:src="@drawable/arrow_down_gray" />
 </RelativeLayout>

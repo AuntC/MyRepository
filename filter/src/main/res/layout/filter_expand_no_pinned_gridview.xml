@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/filter_expand_head_blank"
+        android:layout_width="match_parent"
+        android:layout_height="12dp" />
+
+    <com.meizu.media.life.ui.widget.filter.view.NoScrollGridView
+        android:id="@+id/filter_expand_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="8dp"
+        android:paddingBottom="12dp"
+        android:paddingLeft="@dimen/filter_expandview_pandding"
+        android:paddingRight="@dimen/filter_expandview_pandding"
+        android:verticalSpacing="12dp">
+
+    </com.meizu.media.life.ui.widget.filter.view.NoScrollGridView>
+
+    <View
+        android:id="@+id/filter_expand_foot_blank"
+        android:layout_width="match_parent"
+        android:layout_height="12dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_width_0.67dp"
+        android:background="@color/all_divider_color" />
+
+</LinearLayout>

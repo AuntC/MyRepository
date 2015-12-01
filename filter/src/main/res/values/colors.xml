@@ -3,4 +3,10 @@
     <color name="filter_text_normal">#80000000</color>
     <color name="filter_text_selected">#32a5e7</color>
     <color name="pop_back">#22000000</color>
+    <color name="filter_background">#fafafa</color>
+    <color name="filter_contentview_color">#fafafa</color>
+    <color name="filter_background_color">#80000000</color>
+    <color name="filter_tab_text_color">#000000</color>
+    <color name="filter_expand_child_text">#26000000</color>
+    <color name="all_divider_color">#26000000</color>
 </resources>

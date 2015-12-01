@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:includeFontPadding="false"
+    android:textSize="16sp"
+    android:textColor="@color/appwidget_list_item_title_text_color"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:ellipsize="end"
+    android:gravity="center"
+    android:minHeight="@dimen/table_text_height"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:singleLine="true" />
+
+
