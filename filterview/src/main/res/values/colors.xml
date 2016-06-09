@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="filter_background">#fafafa</color>
+    <color name="filter_contentview_color">#fafafa</color>
+    <color name="filter_background_color">#80000000</color>
+    <color name="filter_tab_text_color">#000000</color>
+    <color name="filter_expand_child_text">#26000000</color>
+
+    <color name="divider_color">#26000000</color>
+    <color name="mz_theme_color_firebrick">#ff0000</color>
+</resources>

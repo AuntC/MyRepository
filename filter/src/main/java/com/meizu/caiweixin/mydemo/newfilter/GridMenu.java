@@ -8,11 +8,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
-import com.meizu.media.life.R;
-import com.meizu.media.life.ui.widget.filter.FilterConstant;
-import com.meizu.media.life.ui.widget.filter.bean.FilterBaseBean;
-import com.meizu.media.life.ui.widget.filter.bean.FilterMenuBean;
-import com.meizu.media.life.ui.widget.filter.menu.GridAdapter;
 
 /**
  * Created by caiweixin on 5/12/15.

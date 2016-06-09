@@ -4,15 +4,13 @@ import android.content.Context;
 import android.util.SparseArray;
 import android.widget.LinearLayout;
 
-import com.meizu.media.life.R;
-import com.meizu.media.life.ui.widget.filter.FilterConstant;
-import com.meizu.media.life.ui.widget.filter.bean.FilterBaseBean;
-import com.meizu.media.life.ui.widget.filter.bean.FilterDistrictBean;
-import com.meizu.media.life.ui.widget.filter.bean.FilterDistrictChildBean;
-import com.meizu.media.life.ui.widget.filter.bean.FilterExpandBean;
-import com.meizu.media.life.ui.widget.filter.bean.FilterInterface;
-import com.meizu.media.life.ui.widget.filter.bean.FilterMenuBean;
-import com.meizu.media.life.ui.widget.filter.view.FilterTabView;
+import com.meizu.caiweixin.mydemo.R;
+import com.meizu.caiweixin.mydemo.filter.FilterConstant;
+import com.meizu.caiweixin.mydemo.filter.bean.FilterBaseBean;
+import com.meizu.caiweixin.mydemo.filter.bean.FilterDistrictBean;
+import com.meizu.caiweixin.mydemo.filter.bean.FilterExpandBean;
+import com.meizu.caiweixin.mydemo.filter.bean.FilterMenuBean;
+import com.meizu.caiweixin.mydemo.filter.view.FilterTabView;
 
 import java.util.List;
 
