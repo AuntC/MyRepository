@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/f_menu_car_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridView
+        android:id="@+id/f_menu_car_gv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/f_menu_car_bt"
+        android:cacheColorHint="@null"
+        android:listSelector="@null"
+        android:numColumns="3" />
+
+    <TextView
+        android:id="@+id/f_menu_car_bt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/holo_green_light"
+        android:gravity="center"
+        android:text="++ 3 ++"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+</RelativeLayout>

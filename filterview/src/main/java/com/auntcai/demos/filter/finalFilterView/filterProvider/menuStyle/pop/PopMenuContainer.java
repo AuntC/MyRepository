@@ -1,4 +1,4 @@
-package com.auntcai.demos.filter.filterview.menuContainer;
+package com.auntcai.demos.filter.finalFilterView.filterProvider.menuStyle.pop;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
@@ -16,13 +16,13 @@ import com.auntcai.demos.filter.R;
 import com.auntcai.demos.filter.utils.DisplayUtil;
 
 /**
- * Description:
+ * Description: 提供filter 弹出 menu view的容器，此类为PopupWindow
  *
  * @author caiweixin
  * @since 6/8/16.
  */
-public class FilterMenuContainer extends PopupWindow {
-    public static final String TAG = "FilterMenuContainer";
+public class PopMenuContainer extends PopupWindow {
+    public static final String TAG = "PopMenuContainer";
 
     protected Context mContext;
     protected int mTabIndex;
@@ -38,7 +38,8 @@ public class FilterMenuContainer extends PopupWindow {
     public static final int DURATION = 272;//时间17帧 * 16ms/帧
     private Animator showTranslation, showAlpha, dismissTranslation, dismissAlpha;
 
-    private int mMaxHeight, mMenuHeight;
+    private int mMaxHeight;
+//    private int mMenuHeight;
 
     private boolean mIsShowAnimation, mIsDismissAnimation;
 
@@ -48,7 +49,7 @@ public class FilterMenuContainer extends PopupWindow {
         public void menuDismiss(int tabIndex);
     }
 
-    public FilterMenuContainer(Context context) {
+    public PopMenuContainer(Context context) {
         super(context);
         initViews(context);
     }
@@ -106,9 +107,6 @@ public class FilterMenuContainer extends PopupWindow {
             public void onAnimationEnd(Animator animation) {
                 mIsDismissAnimation = false;
                 dismiss();
-//                if (null != mMenuDismissListener) {
-//                    mMenuDismissListener.menuDismiss(mTabIndex);
-//                }
             }
 
             @Override
@@ -130,6 +128,7 @@ public class FilterMenuContainer extends PopupWindow {
     }
 
     private void initArgs() {
+        //TODO 308dp
         mMaxHeight = DisplayUtil.getScreenHeight(mContext) * 3 / 5;
     }
 
@@ -169,10 +168,11 @@ public class FilterMenuContainer extends PopupWindow {
         mTabIndex = tabIndex;
         mContainer.addView(menuView);
         menuView.setBackgroundColor(mContext.getResources().getColor(R.color.filter_contentview_color));
-        mMenuHeight = getContentViewHeight();
-        menuView.getLayoutParams().height = mMenuHeight;
+//        mMenuHeight = (menuView.getLayoutParams().height > getMaxContentViewHeight() || menuView.getLayoutParams().height <= 0)
+//                ? getMaxContentViewHeight() : menuView.getLayoutParams().height;
+//        menuView.getLayoutParams().height = mMenuHeight;
         mMenuView = menuView;
-        initContentAnimator(mMenuHeight);
+        initContentAnimator(menuView.getLayoutParams().height);
     }
 
     private void setPopupWindowStyle() {
@@ -189,7 +189,7 @@ public class FilterMenuContainer extends PopupWindow {
         setOutsideTouchable(false);
     }
 
-    public int getContentViewHeight() {
+    public int getMaxContentViewHeight() {
         return mMaxHeight;
     }
 
@@ -328,4 +328,11 @@ public class FilterMenuContainer extends PopupWindow {
             stopDismissAnimation();
         }
     }
+
+    public interface MenuStatusListener {
+        public void show(int tabIndex);
+
+        public void hide(int tabIndex);
+    }
+
 }

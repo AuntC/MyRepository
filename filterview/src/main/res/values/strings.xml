@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">FilterView</string>
+
+    <string name="search_filter_least_distance" translatable="false">离我最近</string>
+    <string name="search_filter_lowest_price" translatable="false">人均最低</string>
+    <string name="search_filter_highest_price" translatable="false">人均最高</string>
+    <string name="search_filter_highest_score" translatable="false">评分最高</string>
+
 </resources>

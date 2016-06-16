@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.auntcai.demos.filter.filterview.FilterView
+    <com.auntcai.demos.filter.finalFilterView.FilterView
         android:id="@+id/filterview"
         android:layout_width="match_parent"
         android:layout_height="40dp"

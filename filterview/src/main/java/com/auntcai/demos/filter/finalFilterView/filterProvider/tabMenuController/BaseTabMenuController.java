@@ -1,4 +1,4 @@
-package com.auntcai.demos.filter.fv;
+package com.auntcai.demos.filter.finalFilterView.filterProvider.tabMenuController;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -8,28 +8,24 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.auntcai.demos.filter.R;
+import com.auntcai.demos.filter.finalFilterView.FilterView;
 
 /**
- * Description:
+ * Description: 生活服务中用的统一的tab view样式，故提供一个基类；
  *
  * @author caiweixin
- * @since 6/9/16.
+ * @since 6/12/16.
  */
-public class TMController implements FilterView.ITabMenuController<Object> {
-    private Object data;
-    private Context mContext;
+public abstract class BaseTabMenuController<T extends FilterView.IFilterItem> extends FilterView.ITabMenuController<T> {
 
-    private View mTabView, mMenuView;
+    private boolean mTabStatus;
     private TabHolder mTabHolder;
 
     private Drawable mDrawableRed, mDrawableGray;
     private int mTextColorRed, mTextColorGray;
 
-    private boolean mTabStatus;
-
-    public TMController(Context context) {
-        mContext = context;
-
+    public BaseTabMenuController(Context context, int type) {
+        super(context, type);
         mDrawableRed = mContext.getResources().getDrawable(R.drawable.arrow_up_red);
         mDrawableGray = mContext.getResources().getDrawable(R.drawable.arrow_down_gray);
         mDrawableRed.setBounds(0, 0, mDrawableRed.getMinimumWidth(), mDrawableRed.getMinimumHeight());
@@ -39,54 +35,23 @@ public class TMController implements FilterView.ITabMenuController<Object> {
     }
 
     @Override
-    public void onCreateMenuView(int maxHeight) {
-        if (null == mMenuView) {
-            mMenuView = LayoutInflater.from(mContext).inflate(R.layout.filter_container_test, null);
-            //TODO check menu height
-        }
-    }
-
-    @Override
-    public View getMenuView() {
-        TextView textView = (TextView) mMenuView.findViewById(R.id.filter_container_tv);
-        textView.setText("M-" + TMController.this.hashCode());
-        return mMenuView;
-    }
-
-    @Override
-    public void onCreateTabView(ViewGroup parent) {
+    public View getTabView(ViewGroup parent) {
         if (null == mTabView) {
             mTabView = LayoutInflater.from(mContext).inflate(R.layout.filter_tab_view, parent, false);
             mTabHolder = new TabHolder(mTabView);
         }
-    }
-
-    @Override
-    public View getTabView() {
-        mTabHolder.textView.setText("T-" + TMController.this.hashCode());
+        changeSelectItem(getCurrentSelection());
         return mTabView;
     }
 
-    @Override
-    public boolean getTabStatus() {
-        return mTabStatus;
+    public void changeSelectItem(T select) {
+        mTabHolder.textView.setText(select.getTabShowText());
     }
 
-    @Override
     public void changeTabStatus(boolean tabStatus) {
         mTabStatus = tabStatus;
         mTabHolder.textView.setTextColor(tabStatus ? mTextColorRed : mTextColorGray);
         mTabHolder.textView.setCompoundDrawables(null, null, tabStatus ? mDrawableRed : mDrawableGray, null);
-    }
-
-    @Override
-    public void setSelectedData(Object o) {
-
-    }
-
-    @Override
-    public Object getSelectedData() {
-        return data;
     }
 
     static class TabHolder {
