@@ -38,7 +38,6 @@ public class FVActivity extends Activity {
         adapter = new FVAdapter(this);
         adapter.setTabs(data);
 
-        filterView.setAdapter(adapter);
     }
 
     @Override
